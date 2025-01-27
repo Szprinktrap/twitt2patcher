@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>twitt2patcher</title>
+</head>
+<body>
+    <p>
+        <h1>twitt2patcher</h1>
+        <h2>Patcher for old (v2.0.0) Android Twitter app</h2>
+    </p>
+    <p>
+        <form action="patch" method="POST">
+            The good stuffs (please make sure these <b>don't</b> end with a slash) <br>
+            API URL <a href="javascript:void(0)" onclick="explainApiURL()">(?)</a> <input required type="text" name="apiUrl" value="http://api.twitter.com"> <br>
+            Search URL <a href="javascript:void(0)" onclick="explainSearchURL()">(?)</a>: <input required type="text" name="searchUrl" value="http://search.twitter.com"> <br>
+            TwitPic API URL <a href="javascript:void(0)" onclick="explainTwitpicApiURL()">(?)</a>: <input required type="text" name="twitpicApiUrl" value="http://api.twitpic.com"> <br>
+            TwitPic URL <a href="javascript:void(0)" onclick="explainTwitpicURL()">(?)</a>: <input required type="text" name="twitpicUrl" value="http://twitpic.com"> <br>
+            <br>
+            Launcher name <a href="javascript:void(0)" onclick="explainLauncherName()">(?)</a>: <input required type="text" name="launcherName" value="Twitter"> <br>
+            Package name <a href="javascript:void(0)" onclick="explainPackageName()">(?)</a>: <input required type="text" name="packageName" value="com.twitter.android"> <br>
+            <br>
+            Tip: You can change HTTP to HTTPS if needed (tho it probably won't work on devices from the era).<br>
+            Also, if you don't need to patch one of these URLs, then just leave them as is.
+            <br> <br>
+            <input type="submit" value="Patch!">
+        </form>
+    </p>
+    <p>
+        <a href="placeholder">Source code</a> | <a href="howtoinstall.html">Can't install the APK?</a> <br>
+        Powered by <a href="https://apktool.org/">Apktool</a>, <a href="https://github.com/dvaoru/ApkRenamer">ApkRenamer</a> and <a href="https://github.com/techexpertize/SignApk">SignApk</a>
+    </p>
+    <script>
+        function explainApiURL() {
+            alert('The bread and butter of the app. Used for pretty much all core functionality.')
+        }
+
+        function explainSearchURL() {
+            alert('As the name suggests, this is used for searching.\nWhy did Twitter in 2010s made this into a different endpoint is beyond me.')
+        }
+
+        function explainTwitpicApiURL() {
+            alert('Back in the old days, Twitter itself did not have a way to upload images. Therefore, you could use external services instead.\nOne of them was TwitPic, which the old Twitter app supported.\nThe API URL was used for uploading pictures to TwitPic.')
+        }
+
+        function explainTwitpicURL() {
+            alert('Back in the old days, Twitter itself did not have a way to upload images. Therefore, you could use external services instead.\nOne of them was TwitPic, which the old Twitter app supported.\nThe non-API URL was used for displaying TwitPic pictures.')
+        }
+
+        function explainLauncherName() {
+            alert('How the app should be called on your home screen.')
+        }
+
+        function explainPackageName() {
+            alert('Android uses package names, usually in form of "com.company.application" to distinguish apps. The same package name was, and still is used since the beginning.\nIf you have the currently-X app installed (why would you?!) then you might want to change this to something else, as you won\'t be able to have both X and patched Twitter v2 installed.')
+        }
+    </script>
+</body>
+</html>

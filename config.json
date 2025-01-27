@@ -1,0 +1,9 @@
+{
+    "app": {
+        "port": 8948
+    },
+    "tools": {
+        "jreBinary": "/home/szprink/java8/bin/java",
+        "apkRenamerDir": "./ApkRenamer"
+    }
+}

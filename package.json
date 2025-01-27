@@ -1,0 +1,16 @@
+{
+  "name": "twitt2patcher",
+  "version": "1.0.0",
+  "description": "Patcher for old (v2.0.0) Twitter for Android app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@expo/spawn-async": "^1.7.2",
+    "express": "^4.21.2",
+    "rimraf": "^4.4.1"
+  }
+}

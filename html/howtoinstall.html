@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installing your patched app on A14 and newer</title>
+</head>
+<body>
+    <p>
+        <h1>"Help! I tried to install the patched APK, but my device told me it's not compatibile???????"</h1>
+        <h2>Don't fret, here's how to deal with it.</h2>
+    </p>
+
+    <p>
+        <h3>Background</h3>
+        Since Android 14, Google introduced this completely ridiculous, unnecessary, dumb and annoying "feature" called "Low-Target SDK Block". <br>
+        What it does is preventing apps targetting Android version 5 (Lolipop) and lower from being installed using "normal" means. It's completely stupid and I have no idea what Google was smoking while coming up with it. <del>Probably the same shit they were smoking when coming up with Play Integrity/SafetyNet.</del>
+        <br><br>
+        The good news is that this block can be bypassed, <b>both using root and not using root!</b> <br>
+        I'll show you 3 methods to do this, from (I think) easiest to hardest.
+    </p>
+
+    <p>
+        <h3>Method 1 (root): LSPosed and Disable Target API Block module.</h3>
+        You need to be rooted to do this.
+        <ol>
+            <li>Install <a href="https://github.com/LSPosed/LSPosed">LSPosed</a>, if you haven't already. If it doesn't work, try using <a href="https://github.com/mywalkb/LSPosed_mod">this mod</a>, it's what I've been using.</li>
+            <li>Install the <a href="https://github.com/buttercookie42/DisableTargetAPIBlock">Disable Target API Block</a> module. <b>WARNING: If you have the <del>useless</del> Play Protect feature enabled, it WILL try to scare you that it's malicious! Tap on "Show more" and install it anyway.</b></li>
+            <li>Enable the module for recommended apps. You should get a notification from LSPosed once you install the APK.</li>
+            <li>Reboot your device.</li>
+            <li>Install the patched APK as you would normally.</li>
+            <li>Enjoy!</li>
+        </ol>
+    </p>
+
+    <p>
+        <h3>Method 2 (no root): Shizuku and "Install With Options" app.</h3>
+        You don't need root to do this, though for setting up Shizuku you need to either be connected to Wi-Fi or have a PC with ADB ready.
+        <ol>
+            <li>Install <a href="https://shizuku.rikka.app/download/">Shizuku</a>, if you haven't already.</li>
+            <li>Set up Shizuku by following the instructions in the app. If needed, you also might refer to <a href="https://shizuku.rikka.app/guide/setup/">Shizuku's User Guide</a>.</li>
+            <li>Install the <a href="https://github.com/zacharee/InstallWithOptions">"Install With Options"</a> app.</li>
+            <li>In the app, check the "Bypass Low-Target SDK Block" option.</li>
+            <li>Tap on Select files, select your patched Twitter APK and hit Install!</li>
+            <li>Enjoy!</li>
+        </ol>
+    </p>
+
+    <p>
+        <h3>Method 3 (no root): ADB.</h3>
+        You don't need root to do this, however you'll need a PC with ADB (and proper drivers).
+        <ol>
+            <li>If you don't have it on your PC, transfer the patched APK to it.</li>
+            <li>Open up a terminal, command prompt, PowerShell, whatever the fuck you use for l33t h4xx0rring.</li>
+            <li>In the terminal, navigate to the directory where your APK is, if you aren't in it already.</li>
+            <li>Run <b>adb install --bypass-low-target-sdk-block your-patched-apk-name.apk</b></li>
+            <li>Wait for the Success message to appear.</li>
+            <li>Enjoy!</li>
+        </ol>
+    </p>
+    <p>
+        <a href="/">Go back?</a>
+    </p>
+</body>
+</html>
